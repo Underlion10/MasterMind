@@ -35,25 +35,13 @@ public class Lienzo extends JPanel{
 		int x = 25;
 		int y = 25;
 		int acu = 1;
-		int j = 0;
-		
-		for(int i = 0; i<20; i++) {
-			if(i == Stuff.pos-1) {
-				CirculoGrande cg = new CirculoGrande(Stuff.colorPintura);
-				circulosGrandes.add(cg);
-				Stuff.pos = 0;
-				continue;
-			}
-			CirculoGrande cg = new CirculoGrande(Stuff.colorPintura);
-			circulosGrandes.add(cg);
-		}
 		
 		for(int i = 0; i<24; i++) {
 			if(acu <= 4) {
-				circulosGrandes.get(j).dibujarCirc(g, x, y, Stuff.colorPintura);
+				CirculoGrande cg = new CirculoGrande(color,x,y);
+				circulosGrandes.add(cg);
 				x+=100;
 				acu++;
-				j++;
 				continue;
 			}
 			x=25;
@@ -61,7 +49,16 @@ public class Lienzo extends JPanel{
 			acu = 1;
 		}
 		
-		repaint();
+		for(int i = 0; i<20; i++) {
+			if(i == Stuff.pos-1) {
+				circulosGrandes.get(i).setColor(Stuff.colorPintura);
+				circulosGrandes.get(i).dibujarCirc(g);
+				continue;
+			}
+			circulosGrandes.get(i).dibujarCirc(g);
+			
+		}
+		
 	}
 
 }

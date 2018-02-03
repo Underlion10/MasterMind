@@ -12,19 +12,19 @@ public class MainBoardMouse implements MouseListener {
 			if (e.getY() >= 425 && e.getY() <= 475) {
 				if (e.getX() >= 25 && e.getX() <= 75) {
 					Stuff.colorPintura = Stuff.colorActual;
-					Stuff.pos = 1;
+					Stuff.pos = 17;
 					Stuff.lienzo.repaint();
 				} else if (e.getX() >= 125 && e.getX() <= 175) {
 					Stuff.colorPintura = Stuff.colorActual;
-					Stuff.pos = 2;
+					Stuff.pos = 18;
 					Stuff.lienzo.repaint();
 				} else if (e.getX() >= 225 && e.getX() <= 275) {
 					Stuff.colorPintura = Stuff.colorActual;
-					Stuff.pos = 3;
+					Stuff.pos = 19;
 					Stuff.lienzo.repaint();
 				} else if (e.getX() >= 325 && e.getX() <= 375) {
 					Stuff.colorPintura = Stuff.colorActual;
-					Stuff.pos = 4;
+					Stuff.pos = 20;
 					Stuff.lienzo.repaint();
 				}
 			}
@@ -32,16 +32,16 @@ public class MainBoardMouse implements MouseListener {
 			if (e.getY() >= 425 && e.getY() <= 475) {
 				if (e.getX() >= 25 && e.getX() <= 75) {
 					Stuff.colorPintura = Stuff.colorActual;
-					Stuff.pos = 5;
+					Stuff.pos = 13;
 				} else if (e.getX() >= 125 && e.getX() <= 175) {
 					Stuff.colorPintura = Stuff.colorActual;
-					Stuff.pos = 6;
+					Stuff.pos = 14;
 				} else if (e.getX() >= 225 && e.getX() <= 275) {
 					Stuff.colorPintura = Stuff.colorActual;
-					Stuff.pos = 7;
+					Stuff.pos = 15;
 				} else if (e.getX() >= 325 && e.getX() <= 375) {
 					Stuff.colorPintura = Stuff.colorActual;
-					Stuff.pos = 8;
+					Stuff.pos = 16;
 				}
 			}
 		} else if (Stuff.ronda == 3) {
@@ -64,32 +64,32 @@ public class MainBoardMouse implements MouseListener {
 			if (e.getY() >= 425 && e.getY() <= 475) {
 				if (e.getX() >= 25 && e.getX() <= 75) {
 					Stuff.colorPintura = Stuff.colorActual;
-					Stuff.pos = 13;
+					Stuff.pos = 5;
 				} else if (e.getX() >= 125 && e.getX() <= 175) {
 					Stuff.colorPintura = Stuff.colorActual;
-					Stuff.pos = 14;
+					Stuff.pos = 6;
 				} else if (e.getX() >= 225 && e.getX() <= 275) {
 					Stuff.colorPintura = Stuff.colorActual;
-					Stuff.pos = 15;
+					Stuff.pos = 7;
 				} else if (e.getX() >= 325 && e.getX() <= 375) {
 					Stuff.colorPintura = Stuff.colorActual;
-					Stuff.pos = 16;
+					Stuff.pos = 8;
 				}
 			}
 		} else if (Stuff.ronda == 5) {
 			if (e.getY() >= 425 && e.getY() <= 475) {
 				if (e.getX() >= 25 && e.getX() <= 75) {
 					Stuff.colorPintura = Stuff.colorActual;
-					Stuff.pos = 17;
+					Stuff.pos = 1;
 				} else if (e.getX() >= 125 && e.getX() <= 175) {
 					Stuff.colorPintura = Stuff.colorActual;
-					Stuff.pos = 18;
+					Stuff.pos = 2;
 				} else if (e.getX() >= 225 && e.getX() <= 275) {
 					Stuff.colorPintura = Stuff.colorActual;
-					Stuff.pos = 19;
+					Stuff.pos = 3;
 				} else if (e.getX() >= 325 && e.getX() <= 375) {
 					Stuff.colorPintura = Stuff.colorActual;
-					Stuff.pos = 20;
+					Stuff.pos = 4;
 				}
 			}
 		}
