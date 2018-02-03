@@ -9,6 +9,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
+import controlador.AccionBoton;
 import controlador.MBMouseMov;
 import controlador.MainBoardMouse;
 import controlador.MouseMov;
@@ -42,6 +43,7 @@ public class Ventana extends JFrame{
 		Stuff.lienzoSuperior.crearComboGanador();
 		Stuff.lienzo.addMouseListener(new MainBoardMouse());
 		Stuff.lienzo.addMouseMotionListener(new MBMouseMov());
+		botonEnv.addActionListener(new AccionBoton(Stuff.lienzo.getCirculoGrande(), Stuff.lienzoLateral.getCirculoPequeno()));
 		panelContenedor.add(Stuff.lienzoSuperior, BorderLayout.NORTH);
 		panelContenedor.add(Stuff.lienzo, BorderLayout.CENTER);
 		panelContenedor.add(Stuff.lienzoLateral, BorderLayout.EAST);
@@ -49,6 +51,7 @@ public class Ventana extends JFrame{
 		panelContenedor.add(panelBot, BorderLayout.SOUTH);
 		cn.add(panelContenedor);
 		pack();
+		cn.revalidate();
 	}
 
 }

@@ -35,37 +35,38 @@ public class LienzoLateral extends JPanel {
 		super.paintComponent(g);
 		g.setColor(new Color(200, 200, 200));
 		int x = 25;
-		int y = 460;
+		int y = 35;
 		int acu = 0;
 		int tot = 0;
-		int j = 0;
-		
-		for(int i = 0; i < 20; i++) {
-			CirculoPequeno cp = new CirculoPequeno(color);
-			circulosPequenos.add(cp);
-		}
 		
 		for (int i = 0; i < 30; i++) {
 			if (tot < 4) {
 				if (acu < 2) {
-					circulosPequenos.get(j).pintarDibujo(g, x, y);
+					CirculoPequeno cp = new CirculoPequeno(color, x, y);
+					circulosPequenos.add(cp);
 					x+=30;
 					acu++;
-					j++;
 					tot++;
 					continue;
 				}
 				x = 25;
-				y -= 25;
+				y += 25;
 				acu = 0;
 				continue;
 			}
 			x = 25;
-			y -= 75;
+			y += 75;
 			acu = 0;
 			tot = 0;
 		}
-		repaint();
+		
+		for(int i = 0; i < 20; i++) {
+			circulosPequenos.get(i).pintarDibujo(g);
+		}
+	}
+	
+	public ArrayList<CirculoPequeno> getCirculoPequeno(){
+		return this.circulosPequenos;
 	}
 
 }

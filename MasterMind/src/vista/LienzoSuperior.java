@@ -41,12 +41,28 @@ public class LienzoSuperior extends JPanel{
 	
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
+		
+		int x = 425;
+		int y = 25;
+		
+		if(!Stuff.ganado) {
 		g.setColor(new Color(143, 151, 147));
-		g.fillOval(125, 25, 50, 50);
-		g.fillOval(225, 25, 50, 50);
-		g.fillOval(335, 25, 50, 50);
-		g.fillOval(425, 25, 50, 50);
-		repaint();
+		
+		for(int i = 0; i < 4; i++) {
+			g.fillOval(x, y, 50, 50);
+			x-= 100;
+		}
+//		g.fillOval(125, 25, 50, 50);
+//		g.fillOval(225, 25, 50, 50);
+//		g.fillOval(335, 25, 50, 50);
+//		g.fillOval(425, 25, 50, 50);
+		} else {
+			for(int i = 0; i < Stuff.comboGanador.size(); i++) {
+				g.setColor(Stuff.comboGanador.get(i));
+				g.fillOval(x, y, 50, 50);
+				x -= 100;
+			}
+		}
 	}
 
 }

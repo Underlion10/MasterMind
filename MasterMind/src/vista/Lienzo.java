@@ -60,5 +60,9 @@ public class Lienzo extends JPanel{
 		}
 		
 	}
+	
+	public ArrayList<CirculoGrande> getCirculoGrande(){
+		return this.circulosGrandes;
+	}
 
 }
