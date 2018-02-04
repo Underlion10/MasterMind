@@ -26,7 +26,7 @@ public class Ventana extends JFrame{
 	 */
 	private static final long serialVersionUID = -4601737718372115147L;
 	
-	Image icono = new ImageIcon("src/modelo/recursos/IconoMasterMind.png").getImage();
+	Image icono = new ImageIcon(getClass().getResource("/modelo/recursos/IconoMasterMind.png")).getImage();
 
 	public Ventana() {
 		super("MasterMind");
