@@ -11,8 +11,8 @@ import javax.swing.JPanel;
 
 import modelo.Stuff;
 
-public class LienzoSuperior extends JPanel{
-	
+public class LienzoSuperior extends JPanel {
+
 	/**
 	 * 
 	 */
@@ -24,45 +24,43 @@ public class LienzoSuperior extends JPanel{
 		JLabel solucion = new JLabel("SOLUCIÓN: ");
 		add(solucion);
 	}
-	
+
 	public Dimension getPreferredSize() {
-		return new Dimension(400,100);
+		return new Dimension(400, 100);
 	}
-	
+
 	public void crearComboGanador() {
 		Random rnd = new Random();
-		
-		for(int i = 0; i < 4; i++) {
+
+		for (int i = 0; i < 4; i++) {
 			Stuff.comboGanador.add(Stuff.colores.get(rnd.nextInt(4)));
 			System.out.println(Stuff.comboGanador.get(i));
 		}
-		
+
 	}
-	
+
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
-		
+
 		int x = 425;
 		int y = 25;
-		
-		if(!Stuff.ganado) {
-		g.setColor(new Color(143, 151, 147));
-		
-		for(int i = 0; i < 4; i++) {
-			g.fillOval(x, y, 50, 50);
-			x-= 100;
-		}
-//		g.fillOval(125, 25, 50, 50);
-//		g.fillOval(225, 25, 50, 50);
-//		g.fillOval(335, 25, 50, 50);
-//		g.fillOval(425, 25, 50, 50);
+
+		if (!Stuff.ganado) {
+			g.setColor(new Color(143, 151, 147));
+
+			for (int i = 0; i < 4; i++) {
+				g.fillOval(x, y, 50, 50);
+				x -= 100;
+			}
 		} else {
-			for(int i = 0; i < Stuff.comboGanador.size(); i++) {
+			for (int i = 0; i < Stuff.comboGanador.size(); i++) {
 				g.setColor(Stuff.comboGanador.get(i));
 				g.fillOval(x, y, 50, 50);
 				x -= 100;
 			}
 		}
+
+		repaint();
 	}
 
 }

@@ -48,6 +48,7 @@ public class LienzoColores extends JPanel{
 			g.fillOval(x, y, 50, 50);
 			y+=100;
 		}
+		
 		repaint();
 	}
 	

@@ -57,9 +57,7 @@ public class Lienzo extends JPanel{
 			}
 			circulosGrandes.get(i).dibujarCirc(g);
 		}
-		
-		repaint();
-		
+				
 	}
 	
 	public ArrayList<CirculoGrande> getCirculoGrande(){

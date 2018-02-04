@@ -41,6 +41,7 @@ public class AccionBoton implements ActionListener {
 		case 5:
 			intentarCombo(4,0);
 			Stuff.lienzoLateral.repaint();
+			break;
 		}
 
 	}
@@ -68,11 +69,13 @@ public class AccionBoton implements ActionListener {
 			Stuff.ganado = true;
 			Stuff.lienzoSuperior.repaint();
 			//System.exit(1);
+		} else if(Stuff.ronda == 5) {
+			JOptionPane.showMessageDialog(Stuff.lienzo, "Has perdido, suerte la próxima vez.");
 		}
 		crearCodigoAleatorio(posicionInicial, posicionFinal, correcto);
 		Stuff.posLateral = posicionFinal;
 		Stuff.ronda++;
-		System.out.println(Stuff.lienzo.getCirculoGrande().get(posicionFinal-1).getColor());
+		System.out.println(Stuff.lienzo.getCirculoGrande().get(posicionFinal).getColor());
 		
 	}
 	

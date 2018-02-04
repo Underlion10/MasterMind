@@ -51,7 +51,7 @@ public class Ventana extends JFrame{
 		panelContenedor.add(panelBot, BorderLayout.SOUTH);
 		cn.add(panelContenedor);
 		pack();
-		revalidate();
+		validate();
 	}
 
 }

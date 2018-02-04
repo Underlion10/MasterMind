@@ -72,7 +72,8 @@ public class LienzoLateral extends JPanel {
 			circulosPequenos.get(i).pintarDibujo(g);
 		}
 		
-		repaint();
+		Stuff.colorLateral.clear();
+		
 	}
 	
 	public ArrayList<CirculoPequeno> getCirculoPequeno(){
