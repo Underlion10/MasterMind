@@ -23,4 +23,5 @@ public class Stuff {
 	public static int ronda = 1;
 	public static int posLateral = 0;
 	public static boolean ganado = false;
+	public static boolean perdido = false;
 }

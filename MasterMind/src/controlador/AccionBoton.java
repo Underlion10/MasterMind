@@ -71,6 +71,7 @@ public class AccionBoton implements ActionListener {
 			//System.exit(1);
 		} else if(Stuff.ronda == 5) {
 			JOptionPane.showMessageDialog(Stuff.lienzo, "Has perdido, suerte la próxima vez.");
+			Stuff.perdido = true;
 		}
 		crearCodigoAleatorio(posicionInicial, posicionFinal, correcto);
 		Stuff.posLateral = posicionFinal;

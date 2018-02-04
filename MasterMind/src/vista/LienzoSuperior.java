@@ -45,7 +45,7 @@ public class LienzoSuperior extends JPanel {
 		int x = 425;
 		int y = 25;
 
-		if (!Stuff.ganado) {
+		if (!Stuff.ganado && !Stuff.perdido) {
 			g.setColor(new Color(143, 151, 147));
 
 			for (int i = 0; i < 4; i++) {
