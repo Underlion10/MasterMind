@@ -14,6 +14,7 @@ import controlador.MBMouseMov;
 import controlador.MainBoardMouse;
 import controlador.MouseMov;
 import controlador.MousePick;
+import controlador.ReiBoton;
 import modelo.Stuff;
 
 public class Ventana extends JFrame{
@@ -25,6 +26,7 @@ public class Ventana extends JFrame{
 
 	public Ventana() {
 		super("MasterMind");
+		setSize(600,600);
 		setLocationRelativeTo(null);
 		setResizable(false);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -34,8 +36,11 @@ public class Ventana extends JFrame{
 		JPanel panelBot = new JPanel();
 		panelBot.setLayout(new FlowLayout());
 		JButton botonEnv = new JButton("Adivinar");
+		JButton botonRei = new JButton("Reintentar");
 		botonEnv.setBounds(150, 25, 175, 50);
+		botonRei.setBounds(150,25,175,50);
 		panelBot.add(botonEnv);
+		panelBot.add(botonRei);
 		panelContenedor.setLayout(new BorderLayout());
 		Stuff.lienzoColores.rellenarColores();
 		Stuff.lienzoColores.addMouseListener(new MousePick());
@@ -44,6 +49,7 @@ public class Ventana extends JFrame{
 		Stuff.lienzo.addMouseListener(new MainBoardMouse());
 		Stuff.lienzo.addMouseMotionListener(new MBMouseMov());
 		botonEnv.addActionListener(new AccionBoton(Stuff.lienzo.getCirculoGrande()));
+		botonRei.addActionListener(new ReiBoton());
 		panelContenedor.add(Stuff.lienzoSuperior, BorderLayout.NORTH);
 		panelContenedor.add(Stuff.lienzo, BorderLayout.CENTER);
 		panelContenedor.add(Stuff.lienzoLateral, BorderLayout.EAST);

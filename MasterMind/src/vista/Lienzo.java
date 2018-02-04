@@ -11,56 +11,63 @@ import javax.swing.JPanel;
 import modelo.CirculoGrande;
 import modelo.Stuff;
 
-public class Lienzo extends JPanel{
+public class Lienzo extends JPanel {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = -257640443263265082L;
-	
+
 	private ArrayList<CirculoGrande> circulosGrandes = new ArrayList<CirculoGrande>();
-	private Color color = new Color(255,255,255);
-	
+	private Color color = new Color(255, 255, 255);
+
 	public Lienzo() {
 		setBackground(new Color(164, 223, 169));
 		setBorder(BorderFactory.createLineBorder(new Color(84, 82, 158)));
 	}
-	
+
 	public Dimension getPreferredSize() {
-		return new Dimension(400,500);
+		return new Dimension(400, 500);
 	}
-	
+
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
 		int x = 25;
 		int y = 25;
 		int acu = 1;
-		
-		for(int i = 0; i<24; i++) {
-			if(acu <= 4) {
-				CirculoGrande cg = new CirculoGrande(color,x,y);
+
+		for (int i = 0; i < 24; i++) {
+			if (acu <= 4) {
+				CirculoGrande cg = new CirculoGrande(color, x, y);
 				circulosGrandes.add(cg);
-				x+=100;
+				x += 100;
 				acu++;
 				continue;
 			}
-			x=25;
-			y+=100;
+			x = 25;
+			y += 100;
 			acu = 1;
 		}
-		
-		for(int i = 0; i<20; i++) {
-			if(i == Stuff.pos-1) {
-				circulosGrandes.get(i).setColor(Stuff.colorPintura);
+
+		if (!Stuff.reiniciar) {
+			for (int i = 0; i < 20; i++) {
+				if (i == Stuff.pos - 1) {
+					circulosGrandes.get(i).setColor(Stuff.colorPintura);
+					circulosGrandes.get(i).dibujarCirc(g);
+					continue;
+				}
 				circulosGrandes.get(i).dibujarCirc(g);
-				continue;
 			}
-			circulosGrandes.get(i).dibujarCirc(g);
+		} else {
+			for(int i = 0; i < 20; i++) {
+				circulosGrandes.get(i).setColor(color);
+				circulosGrandes.get(i).dibujarCirc(g);
+			}
 		}
-				
+
 	}
-	
-	public ArrayList<CirculoGrande> getCirculoGrande(){
+
+	public ArrayList<CirculoGrande> getCirculoGrande() {
 		return this.circulosGrandes;
 	}
 

@@ -24,4 +24,5 @@ public class Stuff {
 	public static int posLateral = 0;
 	public static boolean ganado = false;
 	public static boolean perdido = false;
+	public static boolean reiniciar = false;
 }
