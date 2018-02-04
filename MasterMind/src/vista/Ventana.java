@@ -4,7 +4,9 @@ import java.awt.BorderLayout;
 import java.awt.Container;
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
+import java.awt.Image;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -23,10 +25,13 @@ public class Ventana extends JFrame{
 	 * 
 	 */
 	private static final long serialVersionUID = -4601737718372115147L;
+	
+	Image icono = new ImageIcon("src/modelo/recursos/IconoMasterMind.png").getImage();
 
 	public Ventana() {
 		super("MasterMind");
 		setSize(600,600);
+		setIconImage(icono);
 		setLocationRelativeTo(null);
 		setResizable(false);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -37,6 +42,7 @@ public class Ventana extends JFrame{
 		panelBot.setLayout(new FlowLayout());
 		JButton botonEnv = new JButton("Adivinar");
 		JButton botonRei = new JButton("Reintentar");
+		botonRei.setToolTipText("Reinicia el tablero, cambiando el código misterioso");
 		botonEnv.setBounds(150, 25, 175, 50);
 		botonRei.setBounds(150,25,175,50);
 		panelBot.add(botonEnv);
