@@ -3,12 +3,14 @@ package controlador;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
+import javax.swing.JOptionPane;
+
 import modelo.Stuff;
 
 public class MainBoardMouse implements MouseListener {
 
 	public void mouseClicked(MouseEvent e) {
-		if (Stuff.ronda == 1) {
+		if (Stuff.ronda == 1 && !Stuff.ganado && !Stuff.perdido) {
 			if (e.getY() >= 425 && e.getY() <= 475) {
 				if (e.getX() >= 25 && e.getX() <= 75) {
 					Stuff.colorPintura = Stuff.colorActual;
@@ -28,7 +30,7 @@ public class MainBoardMouse implements MouseListener {
 					Stuff.lienzo.repaint();
 				}
 			}
-		} else if (Stuff.ronda == 2) {
+		} else if (Stuff.ronda == 2 && !Stuff.ganado && !Stuff.perdido) {
 			if (e.getY() >= 325 && e.getY() <= 375) {
 				if (e.getX() >= 25 && e.getX() <= 75) {
 					Stuff.colorPintura = Stuff.colorActual;
@@ -48,7 +50,7 @@ public class MainBoardMouse implements MouseListener {
 					Stuff.lienzo.repaint();
 				}
 			}
-		} else if (Stuff.ronda == 3) {
+		} else if (Stuff.ronda == 3 && !Stuff.ganado && !Stuff.perdido) {
 			if (e.getY() >= 225 && e.getY() <= 275) {
 				if (e.getX() >= 25 && e.getX() <= 75) {
 					Stuff.colorPintura = Stuff.colorActual;
@@ -68,7 +70,7 @@ public class MainBoardMouse implements MouseListener {
 					Stuff.lienzo.repaint();
 				}
 			}
-		} else if (Stuff.ronda == 4) {
+		} else if (Stuff.ronda == 4 && !Stuff.ganado && !Stuff.perdido) {
 			if (e.getY() >= 125 && e.getY() <= 175) {
 				if (e.getX() >= 25 && e.getX() <= 75) {
 					Stuff.colorPintura = Stuff.colorActual;
@@ -88,7 +90,7 @@ public class MainBoardMouse implements MouseListener {
 					Stuff.lienzo.repaint();
 				}
 			}
-		} else if (Stuff.ronda == 5) {
+		} else if (Stuff.ronda == 5 && !Stuff.ganado && !Stuff.perdido) {
 			if (e.getY() >= 25 && e.getY() <= 75) {
 				if (e.getX() >= 25 && e.getX() <= 75) {
 					Stuff.colorPintura = Stuff.colorActual;
@@ -108,6 +110,10 @@ public class MainBoardMouse implements MouseListener {
 					Stuff.lienzo.repaint();
 				}
 			}
+		}
+		
+		if(Stuff.victoriasConsecutivas == 3) {
+			JOptionPane.showMessageDialog(Stuff.lienzo, "ON FIRE", "Tres vistorias consecutivas", JOptionPane.ERROR_MESSAGE);
 		}
 		System.out.println(e.getX() + " " + e.getY());
 		System.out.println(Stuff.pos);

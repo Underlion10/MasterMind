@@ -25,4 +25,5 @@ public class Stuff {
 	public static boolean ganado = false;
 	public static boolean perdido = false;
 	public static boolean reiniciar = false;
+	public static int victoriasConsecutivas = 0;
 }

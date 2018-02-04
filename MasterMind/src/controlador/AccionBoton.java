@@ -67,11 +67,13 @@ public class AccionBoton implements ActionListener {
 		if(correcto == 4) {
 			JOptionPane.showMessageDialog(Stuff.lienzo, "Has acertado el codigo, enhorabuena");
 			Stuff.ganado = true;
+			Stuff.victoriasConsecutivas++;
 			Stuff.lienzoSuperior.repaint();
 			//System.exit(1);
 		} else if(Stuff.ronda == 5) {
 			JOptionPane.showMessageDialog(Stuff.lienzo, "Has perdido, suerte la próxima vez.");
 			Stuff.perdido = true;
+			Stuff.victoriasConsecutivas = 0;
 		}
 		crearCodigoAleatorio(posicionInicial, posicionFinal, correcto);
 		Stuff.posLateral = posicionFinal;

@@ -13,7 +13,7 @@ public class MBMouseMov implements MouseMotionListener{
 	}
 
 	public void mouseMoved(MouseEvent e) {
-		if (Stuff.ronda == 1) {
+		if (Stuff.ronda == 1 && !Stuff.ganado && !Stuff.perdido) {
 			if (e.getY() >= 425 && e.getY() <= 475) {
 				if (e.getX() >= 25 && e.getX() <= 75) {
 					Stuff.lienzo.setCursor(new Cursor(Cursor.HAND_CURSOR));
@@ -33,7 +33,7 @@ public class MBMouseMov implements MouseMotionListener{
 			}
 			Stuff.lienzo.setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
 			return;
-		} else if (Stuff.ronda == 2) {
+		} else if (Stuff.ronda == 2 && !Stuff.ganado && !Stuff.perdido) {
 			if (e.getY() >= 325 && e.getY() <= 375) {
 				if (e.getX() >= 25 && e.getX() <= 75) {
 					Stuff.lienzo.setCursor(new Cursor(Cursor.HAND_CURSOR));
@@ -53,7 +53,7 @@ public class MBMouseMov implements MouseMotionListener{
 			}
 			Stuff.lienzo.setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
 			return;
-		} else if (Stuff.ronda == 3) {
+		} else if (Stuff.ronda == 3 && !Stuff.ganado && !Stuff.perdido) {
 			if (e.getY() >= 225 && e.getY() <= 275) {
 				if (e.getX() >= 25 && e.getX() <= 75) {
 					Stuff.lienzo.setCursor(new Cursor(Cursor.HAND_CURSOR));
@@ -73,7 +73,7 @@ public class MBMouseMov implements MouseMotionListener{
 			}
 			Stuff.lienzo.setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
 			return;
-		} else if (Stuff.ronda == 4) {
+		} else if (Stuff.ronda == 4 && !Stuff.ganado && !Stuff.perdido) {
 			if (e.getY() >= 125 && e.getY() <= 175) {
 				if (e.getX() >= 25 && e.getX() <= 75) {
 					Stuff.lienzo.setCursor(new Cursor(Cursor.HAND_CURSOR));
@@ -93,7 +93,7 @@ public class MBMouseMov implements MouseMotionListener{
 			}
 			Stuff.lienzo.setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
 			return;
-		} else if (Stuff.ronda == 5) {
+		} else if (Stuff.ronda == 5 && !Stuff.ganado && !Stuff.perdido) {
 			if (e.getY() >= 25 && e.getY() <= 75) {
 				if (e.getX() >= 25 && e.getX() <= 75) {
 					Stuff.lienzo.setCursor(new Cursor(Cursor.HAND_CURSOR));

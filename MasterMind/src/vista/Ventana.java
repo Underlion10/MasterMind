@@ -41,10 +41,10 @@ public class Ventana extends JFrame{
 		JPanel panelBot = new JPanel();
 		panelBot.setLayout(new FlowLayout());
 		JButton botonEnv = new JButton("Adivinar");
-		JButton botonRei = new JButton("Reintentar");
+		JButton botonRei = new JButton("Jugar de Nuevo");
 		botonRei.setToolTipText("Reinicia el tablero, cambiando el código misterioso");
 		botonEnv.setBounds(150, 25, 175, 50);
-		botonRei.setBounds(150,25,175,50);
+		botonRei.setBounds(150,25,225,50);
 		panelBot.add(botonEnv);
 		panelBot.add(botonRei);
 		panelContenedor.setLayout(new BorderLayout());
