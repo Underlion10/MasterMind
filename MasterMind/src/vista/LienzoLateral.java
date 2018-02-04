@@ -9,6 +9,7 @@ import javax.swing.BorderFactory;
 import javax.swing.JPanel;
 
 import modelo.CirculoPequeno;
+import modelo.Stuff;
 
 public class LienzoLateral extends JPanel {
 
@@ -61,8 +62,17 @@ public class LienzoLateral extends JPanel {
 		}
 		
 		for(int i = 0; i < 20; i++) {
+			if(Stuff.posLateral == i) {
+				for(int j = 0; j < Stuff.colorLateral.size(); j++) {
+					circulosPequenos.get(i).setColor(Stuff.colorLateral.get(j));
+					circulosPequenos.get(i).pintarDibujo(g);
+					i++;
+				}
+			}
 			circulosPequenos.get(i).pintarDibujo(g);
 		}
+		
+		repaint();
 	}
 	
 	public ArrayList<CirculoPequeno> getCirculoPequeno(){

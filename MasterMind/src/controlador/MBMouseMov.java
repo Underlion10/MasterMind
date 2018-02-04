@@ -94,7 +94,7 @@ public class MBMouseMov implements MouseMotionListener{
 			Stuff.lienzo.setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
 			return;
 		} else if (Stuff.ronda == 5) {
-			if (e.getX() >= 25 && e.getX() <= 75) {
+			if (e.getY() >= 25 && e.getY() <= 75) {
 				if (e.getX() >= 25 && e.getX() <= 75) {
 					Stuff.lienzo.setCursor(new Cursor(Cursor.HAND_CURSOR));
 					return;

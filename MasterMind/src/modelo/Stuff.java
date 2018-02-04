@@ -16,10 +16,11 @@ public class Stuff {
 	public static LienzoColores lienzoColores = new LienzoColores();
 	public static ArrayList<Color> colores = new ArrayList<Color>();
 	public static ArrayList<Color> comboGanador = new ArrayList<Color>();
-	public static ArrayList<Color> posLateral = new ArrayList<Color>();
+	public static ArrayList<Color> colorLateral = new ArrayList<Color>();
 	public static Color colorActual = new Color(255,255,255);
 	public static Color colorPintura = new Color(255,255,255);
 	public static int pos = 0;
 	public static int ronda = 1;
+	public static int posLateral = 0;
 	public static boolean ganado = false;
 }
