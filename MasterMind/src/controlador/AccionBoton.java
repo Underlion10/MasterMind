@@ -6,6 +6,7 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.Random;
 
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 import modelo.CirculoGrande;
@@ -71,13 +72,18 @@ public class AccionBoton implements ActionListener {
 			Stuff.victoriasConsecutivas++;
 			Stuff.lienzoSuperior.repaint();
 			if(Stuff.victoriasConsecutivas == 3) {
-				JOptionPane.showMessageDialog(Stuff.lienzo, "On fire", "Tres victorias consecutivas", JOptionPane.ERROR_MESSAGE);
+				ImageIcon onfire = new ImageIcon(getClass().getResource("/modelo/recursos/fuego.gif"));
+				JOptionPane.showMessageDialog(Stuff.lienzo, "", "ON FIRE - TRES VICTORIAS CONSECUTIVAS !!!", JOptionPane.PLAIN_MESSAGE, onfire);
 			}
 			//System.exit(1);
 		} else if(Stuff.ronda == 5) {
 			JOptionPane.showMessageDialog(Stuff.lienzo, "Has perdido, suerte la próxima vez.");
 			Stuff.perdido = true;
 			Stuff.victoriasConsecutivas = 0;
+		}
+		
+		if(Stuff.ganado) {
+			JOptionPane.showMessageDialog(Stuff.lienzo, "Para volver a jugar, pulse \"Jugar de nuevo\"");
 		}
 		crearCodigoAleatorio(posicionInicial, posicionFinal, correcto);
 		Stuff.posLateral = posicionFinal;

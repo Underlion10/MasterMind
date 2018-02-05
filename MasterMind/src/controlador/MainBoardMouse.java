@@ -3,8 +3,6 @@ package controlador;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
-import javax.swing.JOptionPane;
-
 import modelo.Stuff;
 
 public class MainBoardMouse implements MouseListener {
@@ -110,10 +108,6 @@ public class MainBoardMouse implements MouseListener {
 					Stuff.lienzo.repaint();
 				}
 			}
-		}
-		
-		if(Stuff.victoriasConsecutivas == 3) {
-			JOptionPane.showMessageDialog(Stuff.lienzo, "ON FIRE", "Tres vistorias consecutivas", JOptionPane.ERROR_MESSAGE);
 		}
 		System.out.println(e.getX() + " " + e.getY());
 		System.out.println(Stuff.pos);
