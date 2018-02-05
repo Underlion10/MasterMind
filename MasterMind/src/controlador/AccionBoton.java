@@ -53,6 +53,11 @@ public class AccionBoton implements ActionListener {
 		ArrayList<Color> comboIntento = new ArrayList<Color>();
 		for (int i = posicionInicial-1; i >= posicionFinal; i--) {
 			if (circulosGrandes.get(i).getColor().equals(new Color(255,255,255))) {
+				if(Stuff.ganado) {
+					JOptionPane.showMessageDialog(Stuff.lienzo, "Para volver a jugar, pulse \"Jugar de nuevo\"");
+					Stuff.ganado = true;
+					return;
+				}
 				JOptionPane.showMessageDialog(Stuff.lienzo, "Seleccione un color para poder Adivinar");
 				return;
 			}
@@ -82,9 +87,7 @@ public class AccionBoton implements ActionListener {
 			Stuff.victoriasConsecutivas = 0;
 		}
 		
-		if(Stuff.ganado) {
-			JOptionPane.showMessageDialog(Stuff.lienzo, "Para volver a jugar, pulse \"Jugar de nuevo\"");
-		}
+		
 		crearCodigoAleatorio(posicionInicial, posicionFinal, correcto);
 		Stuff.posLateral = posicionFinal;
 		Stuff.ronda++;
