@@ -67,8 +67,12 @@ public class AccionBoton implements ActionListener {
 		if(correcto == 4) {
 			JOptionPane.showMessageDialog(Stuff.lienzo, "Has acertado el codigo, enhorabuena");
 			Stuff.ganado = true;
+			System.out.println(Stuff.victoriasConsecutivas);
 			Stuff.victoriasConsecutivas++;
 			Stuff.lienzoSuperior.repaint();
+			if(Stuff.victoriasConsecutivas == 3) {
+				JOptionPane.showMessageDialog(Stuff.lienzo, "On fire", "Tres victorias consecutivas", JOptionPane.ERROR_MESSAGE);
+			}
 			//System.exit(1);
 		} else if(Stuff.ronda == 5) {
 			JOptionPane.showMessageDialog(Stuff.lienzo, "Has perdido, suerte la próxima vez.");
