@@ -11,15 +11,19 @@ public class MousePick implements MouseListener{
 		if(e.getX() >= 25 && e.getX() <= 75) {
 			if(e.getY() >= 25 && e.getY() <= 75) {
 				Stuff.colorActual = Stuff.colores.get(0);
+				Stuff.seleccionadoRojo = true;
 				System.out.println("rojo");
 			} else if(e.getY() >= 125 && e.getY() <= 175) {
 				Stuff.colorActual = Stuff.colores.get(1);
+				Stuff.seleccionadoVerde = true;
 				System.out.println("verde");
 			} else if(e.getY() >= 225 && e.getY() <= 275) {
 				Stuff.colorActual = Stuff.colores.get(2);
+				Stuff.seleccionadoAzul = true;
 				System.out.println("azul");
 			} else if(e.getY() >= 325 && e.getY() <= 375) {
 				Stuff.colorActual = Stuff.colores.get(3);
+				Stuff.seleccionadoAmarillo = true;
 				System.out.println("amarillo");
 			}
 		}

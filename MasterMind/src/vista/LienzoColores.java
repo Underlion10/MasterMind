@@ -44,6 +44,19 @@ public class LienzoColores extends JPanel{
 		int x = 25;
 		int y = 25;
 		for(int i = 0; i<4;i++) {
+			if(Stuff.seleccionadoRojo) {
+				g.setColor(new Color(0,0,20));
+				g.drawOval(15, 15, 70, 70);
+			} else if(Stuff.seleccionadoVerde) {
+				g.setColor(new Color(0,0,20));
+				g.drawOval(15, 115, 70, 70);
+			} else if(Stuff.seleccionadoAzul) {
+				g.setColor(new Color(0,0,20));
+				g.drawOval(15, 215, 70, 70);
+			} else if(Stuff.seleccionadoAmarillo) {
+				g.setColor(new Color(0,0,20));
+				g.drawOval(15, 315, 70, 70);
+			} 
 			g.setColor(Stuff.colores.get(i));
 			g.fillOval(x, y, 50, 50);
 			y+=100;
