@@ -60,7 +60,7 @@ public class Lienzo extends JPanel {
 			}
 		} else {
 			for(int i = 0; i < 20; i++) {
-				circulosGrandes.get(i).setColor(color);
+				circulosGrandes.get(i).setColor(new Color(255,255,255));
 				circulosGrandes.get(i).dibujarCirc(g);
 			}
 		}

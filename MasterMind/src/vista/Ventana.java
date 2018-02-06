@@ -49,6 +49,7 @@ public class Ventana extends JFrame{
 		panelBot.add(botonRei);
 		panelContenedor.setLayout(new BorderLayout());
 		Stuff.lienzoColores.rellenarColores();
+		Stuff.lienzoColores.rellenarCirculoGrande();
 		Stuff.lienzoColores.addMouseListener(new MousePick());
 		Stuff.lienzoColores.addMouseMotionListener(new MouseMov());
 		Stuff.lienzoSuperior.crearComboGanador();

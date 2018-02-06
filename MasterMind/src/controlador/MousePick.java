@@ -11,19 +11,35 @@ public class MousePick implements MouseListener{
 		if(e.getX() >= 25 && e.getX() <= 75) {
 			if(e.getY() >= 25 && e.getY() <= 75) {
 				Stuff.colorActual = Stuff.colores.get(0);
-				Stuff.seleccionadoRojo = true;
+				Stuff.cg.get(0).setSeleccionado(true);
+				Stuff.cg.get(1).setSeleccionado(false);
+				Stuff.cg.get(2).setSeleccionado(false);
+				Stuff.cg.get(3).setSeleccionado(false);
+				Stuff.lienzoColores.repaint();
 				System.out.println("rojo");
 			} else if(e.getY() >= 125 && e.getY() <= 175) {
 				Stuff.colorActual = Stuff.colores.get(1);
-				Stuff.seleccionadoVerde = true;
+				Stuff.cg.get(1).setSeleccionado(true);
+				Stuff.cg.get(0).setSeleccionado(false);
+				Stuff.cg.get(2).setSeleccionado(false);
+				Stuff.cg.get(3).setSeleccionado(false);
+				Stuff.lienzoColores.repaint();
 				System.out.println("verde");
 			} else if(e.getY() >= 225 && e.getY() <= 275) {
 				Stuff.colorActual = Stuff.colores.get(2);
-				Stuff.seleccionadoAzul = true;
+				Stuff.cg.get(2).setSeleccionado(true);
+				Stuff.cg.get(0).setSeleccionado(false);
+				Stuff.cg.get(1).setSeleccionado(false);
+				Stuff.cg.get(3).setSeleccionado(false);
+				Stuff.lienzoColores.repaint();
 				System.out.println("azul");
 			} else if(e.getY() >= 325 && e.getY() <= 375) {
 				Stuff.colorActual = Stuff.colores.get(3);
-				Stuff.seleccionadoAmarillo = true;
+				Stuff.cg.get(3).setSeleccionado(true);
+				Stuff.cg.get(0).setSeleccionado(false);
+				Stuff.cg.get(1).setSeleccionado(false);
+				Stuff.cg.get(2).setSeleccionado(false);
+				Stuff.lienzoColores.repaint();
 				System.out.println("amarillo");
 			}
 		}
