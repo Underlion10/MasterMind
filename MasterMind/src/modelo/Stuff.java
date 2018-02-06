@@ -18,6 +18,8 @@ public class Stuff {
 	public static ArrayList<Color> comboGanador = new ArrayList<Color>();
 	public static ArrayList<Color> colorLateral = new ArrayList<Color>();
 	public static ArrayList<CirculoGrande> cg = new ArrayList<CirculoGrande>();
+	public static ArrayList<CirculoGrande> circulosGrandes = new ArrayList<CirculoGrande>();
+	public static ArrayList<CirculoPequeno> circulosPequenos = new ArrayList<CirculoPequeno>();
 	public static Color colorActual = new Color(255,255,255);
 	public static Color colorPintura = new Color(255,255,255);
 	public static int pos = 0;

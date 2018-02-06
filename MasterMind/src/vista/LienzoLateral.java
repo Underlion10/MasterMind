@@ -19,7 +19,6 @@ public class LienzoLateral extends JPanel {
 	private static final long serialVersionUID = 1100106091955365643L;
 
 	private Color color = new Color(255, 255, 255);
-	private ArrayList<CirculoPequeno> circulosPequenos = new ArrayList<CirculoPequeno>();
 
 	public LienzoLateral() {
 		setBackground(new Color(229, 128, 209));
@@ -42,7 +41,7 @@ public class LienzoLateral extends JPanel {
 			if (tot < 4) {
 				if (acu < 2) {
 					CirculoPequeno cp = new CirculoPequeno(color, x, y);
-					circulosPequenos.add(cp);
+					Stuff.circulosPequenos.add(cp);
 					x += 30;
 					acu++;
 					tot++;
@@ -63,28 +62,25 @@ public class LienzoLateral extends JPanel {
 			for (int i = 0; i < 20; i++) {
 				if (Stuff.posLateral == i) {
 					for (int j = 0; j < Stuff.colorLateral.size(); j++) {
-						circulosPequenos.get(i).setColor(Stuff.colorLateral.get(j));
-						circulosPequenos.get(i).pintarDibujo(g);
+						Stuff.circulosPequenos.get(i).setColor(Stuff.colorLateral.get(j));
+						Stuff.circulosPequenos.get(i).pintarDibujo(g);
 						i++;
 					}
 				}
-				circulosPequenos.get(i).pintarDibujo(g);
+				Stuff.circulosPequenos.get(i).pintarDibujo(g);
 			}
 		} else {
 			for(int i=0; i<20; i++) {
-				circulosPequenos.get(i).setColor(color);
-				circulosPequenos.get(i).pintarDibujo(g);
+				Stuff.circulosPequenos.get(i).setColor(new Color(255,255,255));
+				Stuff.circulosPequenos.get(i).pintarDibujo(g);
+				Stuff.reiniciar = false;
 			}
-			
-			Stuff.reiniciar = false;
 		}
-
-		Stuff.colorLateral.clear();
 
 	}
 
 	public ArrayList<CirculoPequeno> getCirculoPequeno() {
-		return this.circulosPequenos;
+		return Stuff.circulosPequenos;
 	}
 
 }

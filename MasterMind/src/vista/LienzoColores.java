@@ -54,7 +54,6 @@ public class LienzoColores extends JPanel {
 		for (int i = 0; i < 4; i++) {
 			Stuff.cg.get(i).dibujarCircSelec(g);
 		}
-
 		repaint();
 	}
 
