@@ -28,9 +28,5 @@ public class Stuff {
 	public static boolean ganado = false;
 	public static boolean perdido = false;
 	public static boolean reiniciar = false;
-	public static boolean seleccionadoRojo = false;
-	public static boolean seleccionadoAzul = false;
-	public static boolean seleccionadoVerde = false;
-	public static boolean seleccionadoAmarillo = false;
 	public static int victoriasConsecutivas = 0;
 }

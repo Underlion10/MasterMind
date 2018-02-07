@@ -76,6 +76,9 @@ public class LienzoLateral extends JPanel {
 				Stuff.reiniciar = false;
 			}
 		}
+		
+		Stuff.colorLateral.clear();
+		
 
 	}
 
