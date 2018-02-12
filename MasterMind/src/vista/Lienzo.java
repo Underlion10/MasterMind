@@ -35,6 +35,14 @@ public class Lienzo extends JPanel {
 		int x = 25;
 		int y = 25;
 		int acu = 1;
+		
+		if(Stuff.reiniciar) {
+			for(int i = 0; i < 20; i++) {
+				Stuff.circulosGrandes.get(i).setColor(new Color(255,255,255));
+				Stuff.circulosGrandes.get(i).dibujarCirc(g);
+				Stuff.reiniciar = false;
+			}
+		}
 
 		for (int i = 0; i < 24; i++) {
 			if (acu <= 4) {
@@ -58,19 +66,20 @@ public class Lienzo extends JPanel {
 				}
 				Stuff.circulosGrandes.get(i).dibujarCirc(g);
 			}
-		} else {
-			for(int i = 0; i < 20; i++) {
-				Stuff.circulosGrandes.get(i).setColor(new Color(255,255,255));
-				Stuff.circulosGrandes.get(i).dibujarCirc(g);
-				Stuff.reiniciar = false;
-			}
-			
-			for(int i = 0; i < 20; i++) {
-				Stuff.circulosGrandes.get(i).setColor(new Color(255,255,255));
-				Stuff.circulosGrandes.get(i).dibujarCirc(g);
-				Stuff.reiniciar = false;
-			}
 		}
+//		} else {
+//			for(int i = 0; i < 20; i++) {
+//				Stuff.circulosGrandes.get(i).setColor(new Color(255,255,255));
+//				Stuff.circulosGrandes.get(i).dibujarCirc(g);
+//				Stuff.reiniciar = false;
+//			}
+//			
+//			for(int i = 0; i < 20; i++) {
+//				Stuff.circulosGrandes.add(new CirculoGrande(new Color(255,255,255), x, y));
+//				Stuff.circulosGrandes.get(i).dibujarCirc(g);
+//				Stuff.reiniciar = false;
+//			}
+//		}
 	}
 
 	public ArrayList<CirculoGrande> getCirculoGrande() {
