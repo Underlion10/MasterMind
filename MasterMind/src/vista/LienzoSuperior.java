@@ -59,8 +59,6 @@ public class LienzoSuperior extends JPanel {
 				x -= 100;
 			}
 		}
-
-		repaint();
 	}
 
 }

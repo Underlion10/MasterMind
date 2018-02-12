@@ -2,6 +2,7 @@ package vista;
 
 import java.awt.BorderLayout;
 import java.awt.Container;
+import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
 import java.awt.Image;
@@ -31,9 +32,9 @@ public class Ventana extends JFrame{
 	public Ventana() {
 		super("MasterMind");
 		setSize(600,600);
+		setMaximumSize(new Dimension(700,700));
 		setIconImage(icono);
 		setLocationRelativeTo(null);
-		setResizable(false);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		Container cn = getContentPane();
 		cn.setLayout(new GridLayout());

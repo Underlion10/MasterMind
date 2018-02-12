@@ -76,11 +76,14 @@ public class LienzoLateral extends JPanel {
 				Stuff.reiniciar = false;
 			}
 		}
+		
+		Stuff.colorLateral.clear();
+		
 
 	}
 
 	public ArrayList<CirculoPequeno> getCirculoPequeno() {
 		return Stuff.circulosPequenos;
 	}
-
+	
 }

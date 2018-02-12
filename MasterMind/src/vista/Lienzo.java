@@ -64,12 +64,16 @@ public class Lienzo extends JPanel {
 				Stuff.circulosGrandes.get(i).dibujarCirc(g);
 				Stuff.reiniciar = false;
 			}
+			
+			for(int i = 0; i < 20; i++) {
+				Stuff.circulosGrandes.get(i).setColor(new Color(255,255,255));
+				Stuff.circulosGrandes.get(i).dibujarCirc(g);
+				Stuff.reiniciar = false;
+			}
 		}
-
 	}
 
 	public ArrayList<CirculoGrande> getCirculoGrande() {
 		return Stuff.circulosGrandes;
 	}
-
 }

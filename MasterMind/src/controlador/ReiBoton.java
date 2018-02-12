@@ -14,6 +14,9 @@ public class ReiBoton implements ActionListener{
 		Stuff.ganado = false;
 		Stuff.perdido = false;
 		Stuff.comboGanador.clear();
+		for(int i = 0; i < Stuff.circulosPequenos.size(); i++) {
+			Stuff.circulosPequenos.set(i, null);
+		}
 		Stuff.circulosPequenos.clear();
 		Stuff.colorLateral.clear();
 		Stuff.lienzoSuperior.crearComboGanador();
